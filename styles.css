@@ -1,0 +1,115 @@
+div, section, p, h1, h2, h3, h4, span{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:'Montserrat';
+    font-size:16px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:0 50px;
+}
+
+.half{
+    flex: 50%;
+}
+
+.half-first{
+    padding: 30px 0;
+}
+
+.half-second{
+    flex: 35%;
+}
+
+
+/*****NAVIGATION*****/
+
+.drawer-nav {
+    background-color: rgba(1,93,94, 0.6);
+    margin-right:100px;
+}
+
+.drawer--left .drawer-hamburger{
+    background-color:rgba(1,93,94, 0.6);
+    top:1vh;
+    left:1%;
+    border-radius:10px;
+    margin-left:20px;
+}
+
+.drawer-hamburger-icon, .drawer-hamburger-icon:after, .drawer-hamburger-icon:before{
+    background-color:#FFF;
+}
+
+/*****HOME SECTION********/
+
+#home{
+    margin-top:10vh;
+}
+
+.arrow{
+    width:300px;
+}
+
+#home{
+    display:flex;
+    justify-content:space-between;
+}
+
+div.relative-container{
+    position:relative;
+    object-fit:cover;
+    width:100%;
+    margin-left:auto;
+    margin-right:0;
+}
+
+.image-container img{
+    width:450px;
+    height:450px;
+
+}
+
+.plane{
+    height:250px;
+    position:absolute;
+    left:-30%;
+    bottom:0;
+}
+
+
+
+/******TYPOGRAPHY******/
+
+h1, h2{
+    font-family:'Abril Fatface';
+}
+
+h1{
+    font-size:6rem;
+    position:absolute;
+    z-index:1;
+}
+
+h2{
+    color:#015D5E;
+    padding-top:130px;
+    font-size:3rem;
+}
+
+h3{
+    font-size:2rem;
+    width:70%;
+    font-weight:300;
+}
+
+h4{
+    font-size:1.8rem;
+    font-weight:200;
+    padding-top:20px;
+}
