@@ -1,3 +1,7 @@
+*{
+    box-sizing:border-box;
+}
+
 div, section, p, h1, h2, h3, h4, span{
     margin:0;
     padding:0;
@@ -22,8 +26,8 @@ body{
     padding: 30px 0;
 }
 
-.half-second{
-    flex: 35%;
+section{
+    margin-top:150px;
 }
 
 
@@ -61,17 +65,22 @@ body{
     justify-content:space-between;
 }
 
-div.relative-container{
+#home div.relative-container{
     position:relative;
-    object-fit:cover;
-    width:100%;
+    width:480px;
     margin-left:auto;
     margin-right:0;
 }
 
+.image-container{
+    object-fit:cover;
+    width:480px;
+
+}
+
 .image-container img{
-    width:450px;
-    height:450px;
+    width:100%;
+    height:480px;
 
 }
 
@@ -82,13 +91,78 @@ div.relative-container{
     bottom:0;
 }
 
+img.sky{
+    margin:auto;
+}
+
+/***HOW IT WORKS SECTION*****/
+
+#howitworks{
+    display:flex;
+}
+
+.ribbon:before {
+    /* margin-top:0.5em; */
+    content: "";
+    display:inline-block;
+    border:35px solid #015D5E;
+  }
+  
+  
+  .ribbon:before {
+    border-left-color:transparent;
+  }
+
+
+  .ribbon{
+      position:absolute;
+      display:flex;
+      width:calc(100% + 350px);
+      top:75px;
+      left:-350px;
+  }
+
+  #howitworks h2{
+    height:70px;
+    overflow:hidden;
+    background-color: #015D5E;
+    width:100%;
+    line-height:70px;
+    text-align:right;    
+    color:#FFF;
+    font-size:2.5rem;
+    padding-right:50px;
+
+  }
+
+  .half-relative{
+      position:relative;
+  }
+
+  #howitworks .half-first p{
+      margin-top:170px;
+      font-size:1.7rem;
+      font-weight:300;
+  }
+
+  #howitworks .half-first p:last-of-type{
+      margin-top:30px;
+  }
+
+  #howitworks .half-first p a{
+      text-decoration:none;
+      color:#B23232;
+      font-weight:400;
+  }
 
 
 /******TYPOGRAPHY******/
 
 h1, h2{
     font-family:'Abril Fatface';
+    font-weight:normal;
 }
+
 
 h1{
     font-size:6rem;
@@ -96,7 +170,7 @@ h1{
     z-index:1;
 }
 
-h2{
+#home h2{
     color:#015D5E;
     padding-top:130px;
     font-size:3rem;
@@ -113,3 +187,4 @@ h4{
     font-weight:200;
     padding-top:20px;
 }
+
