@@ -9,37 +9,35 @@
 	<!-- NORMALIZE CSS -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 	<!-- FONTS -->
-	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat:200,300,400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat:200,300,400&display=swap"
+		rel="stylesheet">
+
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
 	<!-- drawer.css -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
 	<!-- MY CSS -->
 	<link href="styles.css" rel="stylesheet">
 	<!-- jquery & iScroll -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
-	<!-- drawer.js -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+
 </head>
 
-<body class="drawer drawer--left">
-	<header role="banner">
-		<button type="button" class="drawer-toggle drawer-hamburger">
-			<span class="sr-only">toggle navigation</span>
-			<span class="drawer-hamburger-icon"></span>
-		</button>
-		<nav class="drawer-nav" role="navigation">
-			<ul class="drawer-menu">
-				<li><a class="drawer-brand" href="#">Brand</a></li>
-				<li><a class="drawer-menu-item" href="#">Nav1</a></li>
-				<li><a class="drawer-menu-item" href="#">Nav2</a></li>
-			</ul>
-		</nav>
-	</header>
+<body>
 
+		<ul id="slide-out" class="sidenav">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#howitworks">About</a> </li>
+			<li><a href="#travellist">Travel List</a> </li>
+			<li></li>
+		</ul>
+		<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
 	<main role="main">
 		<!-- Page content -->
-		<div class="container">
+		<div class="page-container">
 
 			<header id="home">
 
@@ -80,8 +78,8 @@
 						<h2>How does it work?</h2>
 					</div>
 
-					<p>Mercury Airlines is a vacation 
-						oriented airline that provides first class flights to the most popular 
+					<p>Mercury Airlines is a vacation
+						oriented airline that provides first class flights to the most popular
 						locations at the price of economy. Our list of locations changes yearly and seating is limited
 					</p>
 					<p><a href="#">Start Planning Now</a></p>
@@ -91,16 +89,57 @@
 			</section>
 
 
-			<section id="travellist"></section>
+			<section id="travellist">
+
+				<h2>Our 2020 Travel List</h2>
+
+				<div class="carousel-container">
+					<a href="#"><img class="movePrevCarousel" src="imgs/arrow-left.svg" alt="previous arrow"> </a>
+					<div class="carousel">
+						<div class="carousel-item" href="#one!"><h3>honolulu, <br> hawaii</h3><img src="imgs/honolulu.jpg"></div>
+						<div class="carousel-item" href="#two!"><h3>osaka, <br> japan</h3><img src="imgs/osaka.jpg"></div>
+						<div class="carousel-item" href="#three!"><h3>seoul, <br> south korea</h3><img src="imgs/seoul.jpg"></div>
+						<div class="carousel-item" href="#four!"><h3>venice, <br> italy</h3><img src="imgs/venice.jpg"></div>
+					</div>
+					<a href="#"><img class="moveNextCarousel" src="imgs/arrow-right.svg" alt="next arrow"> </a>
+				</div>
+				
+			</section>
 
 		</div>
 	</main>
 
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+	<!-- drawer.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
 	<script>
+		// $(document).ready(function () {
+		// 	$('.drawer').drawer();
+		// });
+
+
 		$(document).ready(function () {
-			$('.drawer').drawer();
+			$('.sidenav').sidenav();
+			$('.carousel').carousel();
 		});
+
+		// move next carousel
+		$('.moveNextCarousel').click(function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+			$('.carousel').carousel('next');
+		});
+
+		// move prev carousel
+		$('.movePrevCarousel').click(function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+			$('.carousel').carousel('prev');
+		});
+
 	</script>
 </body>
 
