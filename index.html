@@ -17,29 +17,26 @@
 	<!--Import materialize.css-->
 	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
 
-	<!-- drawer.css -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
 	<!-- MY CSS -->
 	<link href="styles.css" rel="stylesheet">
-	<!-- jquery & iScroll -->
 
 </head>
 
 <body>
 
-		<ul id="slide-out" class="sidenav">
-			<li><a href="#home">Home</a></li>
-			<li><a href="#howitworks">About</a> </li>
-			<li><a href="#travellist">Travel List</a> </li>
-			<li></li>
-		</ul>
-		<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+	<ul id="slide-out" class="sidenav">
+		<li><a href="#home">Home</a></li>
+		<li><a href="#howitworks">About</a> </li>
+		<li><a href="#travellist">Travel List</a> </li>
+		<li><a href="#newsletter">Newsletter</a> </li>
+	</ul>
+	<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
 	<main role="main">
 		<!-- Page content -->
 		<div class="page-container">
 
-			<header id="home">
+			<header id="home" class="scrollspy">
 
 				<div class="half half-first">
 
@@ -65,7 +62,7 @@
 				</div>
 			</header>
 
-			<section id="howitworks">
+			<section class="scrollspy" id="howitworks">
 
 				<div class="half half-second">
 					<div class="image-container">
@@ -89,39 +86,130 @@
 			</section>
 
 
-			<section id="travellist">
+			<section class="scrollspy" id="travellist">
 
 				<h2>Our 2020 Travel List</h2>
 
 				<div class="carousel-container">
 					<a href="#"><img class="movePrevCarousel" src="imgs/arrow-left.svg" alt="previous arrow"> </a>
 					<div class="carousel">
-						<div class="carousel-item" href="#one!"><h3>honolulu, <br> hawaii</h3><img src="imgs/honolulu.jpg"></div>
-						<div class="carousel-item" href="#two!"><h3>osaka, <br> japan</h3><img src="imgs/osaka.jpg"></div>
-						<div class="carousel-item" href="#three!"><h3>seoul, <br> south korea</h3><img src="imgs/seoul.jpg"></div>
-						<div class="carousel-item" href="#four!"><h3>venice, <br> italy</h3><img src="imgs/venice.jpg"></div>
+						<div class="carousel-item" href="#one!">
+							<h3>honolulu, <br> hawaii</h3><img src="imgs/honolulu.jpg">
+						</div>
+						<div class="carousel-item" href="#two!">
+							<h3>osaka, <br> japan</h3><img src="imgs/osaka.jpg">
+						</div>
+						<div class="carousel-item" href="#three!">
+							<h3>seoul, <br> south korea</h3><img src="imgs/seoul.jpg">
+						</div>
+						<div class="carousel-item" href="#four!">
+							<h3>venice, <br> italy</h3><img src="imgs/venice.jpg">
+						</div>
 					</div>
 					<a href="#"><img class="moveNextCarousel" src="imgs/arrow-right.svg" alt="next arrow"> </a>
 				</div>
-				
+
 			</section>
 
+			<section class="scrollspy" id="travelservices">
+				<div class="services-container">
+
+					<div class="card">
+						<div class="card-image">
+							<img src="imgs/checkin.jpg">
+						</div>
+						<div class="card-content">
+							<h3>No Waiting</h3>
+							<p>Due to our limited seating per flight, you can enjoy speedy lines through check-in and 
+								security, getting you to your gate with ample time for your departure. With our expedited baggage, you are can check up to 2 bags for free </p>
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="card-image">
+							<img src="imgs/spacious.jpeg">
+						</div>
+						<div class="card-content">
+							<h3>Spacious Seating</h3>
+							<p>Our seats boast extreme 
+								comfort and an extra 8 inches of legroom compared to an economy flight, guaranteeing you relaxation your whole trip</p>
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="card-image">
+							<img src="imgs/personalized.jpeg">
+						</div>
+						<div class="card-content">
+							<h3>Personalized Service</h3>
+							<p>Our flight attendants are eager to assist you with smiles on their faces and provide drinks and snacks whenever desired</p>
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="card-image">
+							<img src="imgs/plugin.jpeg">
+						</div>
+						<div class="card-content">
+							<h3>Plug-in</h3>
+							<p>Stay connected with our free Wi-Fi and 110-volt outlets at every seat, and enjoy free screenings of movie visible from every row</p>
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="card-image">
+							<img src="imgs/food.jpeg">
+						</div>
+						<div class="card-content">
+							<h3>Don't go Hungry</h3>
+							<p>Enjoy a full chef-curated meal service from an expansive, 
+								ever-changing menu of quality food       </p>
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="card-image">
+							<img src="imgs/amenities.jpeg">
+						</div>
+						<div class="card-content">
+							<h3>Amenities</h3>
+							<p>Forget something for your flight? Enjoy complimentary flight luxuries like blankets, 
+								pillows, and noise canceling headphones</p>
+						</div>
+					</div>
+
+				</div>
+			</section>
 		</div>
+
+		<section class="scrollspy" id="newsletter"> 
+			<div class="newsletter-content">
+				<h2>Sign Up For Our Newsletter</h2>
+				<p>Receive notifications for when tickets are available or when our flight destinations change and for all news Mercury related</p>
+
+				<form>
+					<input type="email" placeholder="email . . ." id="email" required>
+					<input type="submit" value="submit">
+				</form>
+
+			</div>
+
+		</section>
+
+			<footer>
+
+			</footer>
+
 	</main>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
-	<!-- drawer.js -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
 	<script>
-		// $(document).ready(function () {
-		// 	$('.drawer').drawer();
-		// });
 
 
 		$(document).ready(function () {
+			// $('.scrollspy').scrollSpy();
 			$('.sidenav').sidenav();
 			$('.carousel').carousel();
 		});

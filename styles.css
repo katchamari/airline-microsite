@@ -2,9 +2,10 @@
     box-sizing: border-box;
 }
 
-div, section, p, h1, h2, h3, h4, span {
+div, section, p, h1, h2, h3, h4, span, form, form input, input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
     margin: 0;
     padding: 0;
+    border-bottom:0;
 }
 
 body {
@@ -45,6 +46,7 @@ section {
     border-radius: 5px;
     font-size:4rem;
     position:fixed;
+    z-index:5;
 }
 
 .sidenav li>a{
@@ -206,6 +208,95 @@ section {
     top:20px;
 }
 
+/*********SERVICES**********/
+
+.services-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+
+div.card{
+    flex:1 30%;
+    margin-bottom:70px;
+    margin-right:5%;
+    background-color:#E5EAEA;
+    border-radius:15px;
+}
+
+div.card .card-image img{
+    -moz-border-radius: 0px;
+-webkit-border-radius: 15px 15px 0px 0px;
+border-radius: 15px 15px 0px 0px;
+    height:200px;
+    object-fit:cover;
+
+}
+
+div.card:nth-of-type(3), div.card:nth-of-type(6){
+    margin-right:0;
+}
+
+/*********NEWSLETTER********/
+
+#newsletter{
+    width:100%;
+    text-align:center;
+    background:#015D5E;
+    padding: 25px 0;
+    margin-bottom:150px;
+}
+
+#newsletter form{
+    width:40%;
+    margin:auto;
+    display:flex;
+    border:solid 2px #CECECE;
+    margin-top:20px;
+}
+
+input[type=email]:not(.browser-default){
+    background-color:#FFF;
+    padding-left:10px;
+    color:#777777
+}
+
+input[type=submit]:not(.browser-default){
+    width:150px;
+    background-color:#C46C6C;
+    color:#FFF;
+    font-weight:400;
+    text-transform:uppercase;
+}
+
+input:focus{
+    outline:none;
+}
+
+
+::placeholder{
+    color:#777777;
+    opacity:1;
+    font-weight:200;
+    letter-spacing:2px;
+}
+
+/******FOOTER*******/
+
+footer{
+    height:200px;
+    background:url("imgs/sky.jpg") no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
 
 /******TYPOGRAPHY******/
 
@@ -245,4 +336,23 @@ h4 {
 a{
     text-decoration;
     color:#B23232;
+}
+
+.card-content h3{
+    font-weight:400;
+    color:#015D5E;
+    font-size:1.3rem;
+    padding-bottom:10px;
+}
+
+.card-content p{
+    font-weight:300;
+}
+
+#newsletter h2, #newsletter p{
+    color:#FFF;
+}
+
+#newsletter p{
+    font-weight:300;
 }
