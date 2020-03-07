@@ -8,6 +8,11 @@ div, section, p, h1, h2, h3, h4, span, form, form input, input:not([type]), inpu
     border-bottom:0;
 }
 
+input {
+    -webkit-border-radius:0; 
+    border-radius:0;
+}
+
 html{
     scroll-behavior:smooth;
 }
@@ -275,6 +280,8 @@ input[type=submit]:not(.browser-default){
     color:#FFF;
     font-weight:400;
     text-transform:uppercase;
+    -webkit-appearance: none;
+
 }
 
 input:focus{
