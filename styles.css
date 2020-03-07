@@ -8,6 +8,10 @@ div, section, p, h1, h2, h3, h4, span, form, form input, input:not([type]), inpu
     border-bottom:0;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body {
     font-family: 'Montserrat';
     font-size: 16px;
@@ -338,7 +342,7 @@ h4 {
 }
 
 a{
-    text-decoration;
+    text-decoration:none;
     color:#B23232;
 }
 
@@ -424,7 +428,7 @@ a{
         margin-right:10%;
     }
 
-    div.card:nth-of-type(3n + 3){
+    div.card:nth-of-type(odd){
         margin-right:10%;
     }
 
@@ -513,10 +517,10 @@ a{
         padding-right: 50px;
     }
 
-    .carousel .carousel-item{
+    /* .carousel .carousel-item{
         width:250px;
         height:250px;
-    }
+    } */
 
 
 
@@ -546,7 +550,8 @@ a{
     #home{
         position:relative;
         margin-top:0;
-        height:50vh;
+        height:300px;
+        height:auto;
     }
 
     #home .half-first{
@@ -572,7 +577,7 @@ a{
         position:absolute;
     }
 
-    .carousel, .services-container{
+    .services-container{
         margin:auto;
     }
 
@@ -600,22 +605,70 @@ a{
     #travellist h2{
         padding-bottom:15px;
     }
-}
 
-@media only screen and (max-width:600px){
     div.card{
         flex:100%;
         margin-right:0;
     }
 
+    div.card:nth-of-type(odd){
+        margin-right:0;
+    }
+
+
+}
+
+@media only screen and (max-width:600px){
+
+
     #newsletter form{
         width:80%;
     }
 
-    .carousel .carousel-item{
-        width:40vw;
-        height:40vw;
+    h1{
+        font-size:9vw;
     }
 
+    #home h2{
+        font-size:5vw;
+        padding-top:50px;
+    }
 
+    #home{
+        margin-top:-30px;
+    }
+
+    img.arrow{
+        width:40vw;
+    }
+
+    #home h3{
+        font-size:4vw;
+    }
+
+    #home h4{
+        font-size:3vw;
+    }
+
+    #howitworks h2{
+        font-size:5vw;
+    }
+
+    #howitworks .half-first p{
+        font-size:3vw;
+    }
+}
+
+@media only screen and (max-width:560px){
+    #home{
+        height:400px;
+    }
+
+    #howitworks .text-container{
+        padding:5%;
+    }
+
+    #howitworks{
+        height:400px;
+    }
 }

@@ -7,7 +7,7 @@
 
 	<title>Mercury Airlines</title>
 	<!-- NORMALIZE CSS -->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+	<link href="css/normalize.css" rel="stylesheet">
 	<!-- FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat:200,300,400&display=swap"
 		rel="stylesheet">
@@ -36,7 +36,7 @@
 		<!-- Page content -->
 		<div class="page-container">
 
-			<header id="home" class="scrollspy">
+			<header id="home" class="">
 
 				<div class="half half-first">
 
@@ -62,7 +62,7 @@
 				</div>
 			</header>
 
-			<section class="scrollspy" id="howitworks">
+			<section class="" id="howitworks">
 
 				<div class="half half-second">
 					<div class="image-container">
@@ -78,18 +78,19 @@
 					<div class="text-container">
 						<p>Mercury Airlines is a vacation
 							oriented airline that provides first class flights to the most popular
-							locations at the price of economy. Our list of locations changes yearly and seating is limited
+							locations at the price of economy. Our list of locations changes yearly and seating is
+							limited
 						</p>
 						<p><a href="#">Start Planning Now</a></p>
 					</div>
-					
+
 				</div>
 
 
 			</section>
 
 
-			<section class="scrollspy" id="travellist">
+			<section id="travellist">
 
 				<h2>Our 2020 Travel List</h2>
 
@@ -114,7 +115,7 @@
 
 			</section>
 
-			<section class="scrollspy" id="travelservices">
+			<section id="travelservices">
 				<div class="services-container">
 
 					<div class="card">
@@ -123,8 +124,9 @@
 						</div>
 						<div class="card-content">
 							<h3>No Waiting</h3>
-							<p>Due to our limited seating per flight, you can enjoy speedy lines through check-in and 
-								security, getting you to your gate with ample time for your departure. With our expedited baggage, you are can check up to 2 bags for free </p>
+							<p>Due to our limited seating per flight, you can enjoy speedy lines through check-in and
+								security, getting you to your gate with ample time for your departure. With our
+								expedited baggage, you are can check up to 2 bags for free </p>
 						</div>
 					</div>
 
@@ -134,8 +136,9 @@
 						</div>
 						<div class="card-content">
 							<h3>Spacious Seating</h3>
-							<p>Our seats boast extreme 
-								comfort and an extra 8 inches of legroom compared to an economy flight, guaranteeing you relaxation your whole trip</p>
+							<p>Our seats boast extreme
+								comfort and an extra 8 inches of legroom compared to an economy flight, guaranteeing you
+								relaxation your whole trip</p>
 						</div>
 					</div>
 
@@ -145,7 +148,8 @@
 						</div>
 						<div class="card-content">
 							<h3>Personalized Service</h3>
-							<p>Our flight attendants are eager to assist you with smiles on their faces and provide drinks and snacks whenever desired</p>
+							<p>Our flight attendants are eager to assist you with smiles on their faces and provide
+								drinks and snacks whenever desired</p>
 						</div>
 					</div>
 
@@ -155,7 +159,8 @@
 						</div>
 						<div class="card-content">
 							<h3>Plug-in</h3>
-							<p>Stay connected with our free Wi-Fi and 110-volt outlets at every seat, and enjoy free screenings of movie visible from every row</p>
+							<p>Stay connected with our free Wi-Fi and 110-volt outlets at every seat, and enjoy free
+								screenings of movie visible from every row</p>
 						</div>
 					</div>
 
@@ -165,8 +170,8 @@
 						</div>
 						<div class="card-content">
 							<h3>Don't go Hungry</h3>
-							<p>Enjoy a full chef-curated meal service from an expansive, 
-								ever-changing menu of quality food       </p>
+							<p>Enjoy a full chef-curated meal service from an expansive,
+								ever-changing menu of quality food </p>
 						</div>
 					</div>
 
@@ -176,7 +181,7 @@
 						</div>
 						<div class="card-content">
 							<h3>Amenities</h3>
-							<p>Forget something for your flight? Enjoy complimentary flight luxuries like blankets, 
+							<p>Forget something for your flight? Enjoy complimentary flight luxuries like blankets,
 								pillows, and noise canceling headphones</p>
 						</div>
 					</div>
@@ -185,10 +190,11 @@
 			</section>
 		</div>
 
-		<section class="scrollspy" id="newsletter"> 
+		<section id="newsletter">
 			<div class="newsletter-content">
 				<h2>Sign Up For Our Newsletter</h2>
-				<p>Receive notifications for when tickets are available or when our flight destinations change and for all news Mercury related</p>
+				<p>Receive notifications for when tickets are available or when our flight destinations change and for
+					all news Mercury related</p>
 
 				<form>
 					<input type="email" placeholder="email . . ." id="email" required>
@@ -199,9 +205,9 @@
 
 		</section>
 
-			<footer>
+		<footer>
 
-			</footer>
+		</footer>
 
 	</main>
 
@@ -212,7 +218,6 @@
 
 
 		$(document).ready(function () {
-			// $('.scrollspy').scrollSpy();
 			$('.sidenav').sidenav();
 			$('.carousel').carousel();
 		});
@@ -230,6 +235,30 @@
 			e.stopPropagation();
 			$('.carousel').carousel('prev');
 		});
+
+
+
+		(function ($) {
+			var $window = $(window);
+
+			function resize() {
+				if ($window.width() < 768) {
+					return $('.carousel').addClass('carousel-slider');
+				}
+
+				$('.carousel').removeClass('carousel-slider');
+			}
+
+			$window
+				.resize(resize)
+				.trigger('resize');
+		})(jQuery);
+
+		$('.carousel.carousel-slider').carousel({
+			full_width: true
+		});
+
+
 
 	</script>
 </body>
